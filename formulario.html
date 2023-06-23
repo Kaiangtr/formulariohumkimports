@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_io/favicon-16x16.png" type="image/x-icon">
+    <title>Seleção Perfumes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20,147, 220), rgb(17, 54, 71));
+        }
+        .box{
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+            }
+          fieldset{
+            border: 3px solid dodgerblue;
+          }
+          legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+           
+          }
+         .inputBox{
+            position: relative;
+         }
+         .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 200px;
+            letter-spacing: 2px;
+
+         }
+         .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+         }
+         .inputUser:focus ~ .labelInput,
+         .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+         }
+         #data_compra{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+         }
+         #submit{
+             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+             width: 100x;
+             border: none;
+             padding: 15px;
+             color: white;
+             font-size: 15px;
+             cursor: pointer;
+             border-radius: 10px;
+         }
+         #submit:hover{
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+         }
+         .form-control{
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+             width: 250px;
+             border: none;
+             padding: 10px;
+             color: rgb(0, 0, 0);
+             font-size: 15px;
+             cursor: pointer;
+             border-radius: 8px;
+
+         }
+         .form-controlf{
+            background-image: linear-gradient(to right, rgb(197, 0, 148), rgb(128, 75, 207));
+             width: 250px;
+             border: none;
+             padding: 10px;
+             color: rgb(77, 3, 92);
+             font-size: 15px;
+             cursor: pointer;
+             border-radius: 8px;
+             }
+
+         .form-control:hover:hover{
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+         }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Encomenda de Perfumes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br>
+                <br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput" >Telefone</label>
+                </div>
+                <p>Perfume</p>
+                <input type="radio" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+
+                <select class="form-controlf" name="list" >
+                    <option value="feminino">-</option>
+                    <option value="feminino">212 Heroes Forever Young</option>
+                    <option value="feminino">212 Sexy</option>
+                    <option value="feminino">Ange Ou Demon</option>
+                    <option value="feminino">Angel</option>
+                    <option value="feminino">Fantasy</option>
+                    <option value="feminino">Good Girls</option>
+                    <option value="feminino">Olympea</option>
+                    <option value="feminino">Scandals</option></select>
+                    <br><br>
+
+                <input type="radio" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <select class="form-control" name="list">
+                    <option value="masculino">-</option>
+                    <option value="masculino">212 Men Heroes Forever Young</option>
+                    <option value="masculino">212 Vip Black</option>
+                    <option value="masculino">Bad Boy</option>
+                    <option value="masculino">Bleu De Channel</option>
+                    <option value="masculino">Ferrari Red</option>
+                    <option value="masculino">Invictus</option>
+                    <option value="masculino">Phantom</option>
+                    <option value="masculino">Sauvage</option></select>
+               
+                <br><br>
+                 <div class="inputBox">
+                    <label for="data_compra"><b>Data da Compra:</b></label>
+                    <input type="date" name="data_compra" id="data_compra" class="data_compra" required>
+                 </div>
+                 <br>
+                  <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput" >Cidade</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput" >Estado</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco" class="labelInput" >Endereço</label>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
